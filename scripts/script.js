@@ -21,3 +21,17 @@ document.getElementById('price-action').onclick = function () {
       alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время!');
    }
 }
+
+//автомобиль изменяет свою позицию при перемещении курсора мыши в разные стороны по осям X и Y
+document.addEventListener("DOMContentLoaded", function () {
+   let layer = document.querySelector('.price-image');
+   document.addEventListener('mousemove', (event) => {
+      layer.style.transform = 'translate3d(' + ((event.clientX * 0.4) / 10) + 'px,' + ((event.clientY * 0.4) / 10) + 'px,0px)';
+   });
+
+//на главном экране фон передвигается при скроллинге страницы (картинка с автомобилем смещается вправо при скроллинге вниз)
+   const elem = document.querySelector(".main");
+   document.addEventListener('scroll', () => {
+      elem.style.backgroundPositionX = '0' + (0.7 * window.pageYOffset) + 'px';
+   })
+});
