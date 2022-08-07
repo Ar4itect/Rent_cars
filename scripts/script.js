@@ -32,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //на главном экране фон передвигается при скроллинге страницы (картинка с автомобилем смещается вправо при скроллинге вниз)
    const elem = document.querySelector(".main");
    document.addEventListener('scroll', () => {
-      elem.style.backgroundPositionX = '0' + (0.7 * window.pageYOffset) + 'px';
+      elem.style.backgroundPositionX = '0' + (0.4 * window.pageYOffset) + 'px';
    })
 });
